@@ -7,11 +7,14 @@ import { AppComponent } from './app.component';
 import { ProductsearchComponent } from './productsearch/productsearch.component';
 import { ProductService } from './service/product.service';
 import { FormsModule } from '@angular/forms';
+import { FinddisctrictComponent } from "./finddisctrict/FinddisctrictComponent";
+import { DevisionService } from './service/division.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsearchComponent,
+    FinddisctrictComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, DevisionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
